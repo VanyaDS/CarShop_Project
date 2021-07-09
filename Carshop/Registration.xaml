@@ -1,0 +1,65 @@
+﻿<Window x:Class="TaskManager.Registration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskManager"
+        mc:Ignorable="d"
+        Title="Registration" Height="758.23" Width="434.483"  ResizeMode="NoResize"  Foreground="White"  WindowStartupLocation="CenterScreen"  WindowStyle="None" BorderBrush="Black" BorderThickness="1" >
+    <Window.Background>
+        <ImageBrush x:Name="fon" ImageSource="images\fonReady.jpg"/>
+    </Window.Background>
+    <Grid Margin="0,0,0,-2.4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="43*"/>
+            <ColumnDefinition Width="171*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button  HorizontalAlignment="Left" Margin="311.4,0,0,0" VerticalAlignment="Top" Width="26" BorderBrush="{x:Null}" Background="{x:Null}" Height="25"  RenderTransformOrigin="0.579,0.294" Click="CloseBut_Click" Name="CloseBut" Grid.Column="1" Panel.ZIndex="1" >
+            <Image Source="images\close2.png" Height="20" Width="18"/>
+        </Button>
+        <Button x:Name="MinWindowBut"  HorizontalAlignment="Left" Margin="281.4,0,0,0" VerticalAlignment="Top" Width="26" BorderBrush="{x:Null}" Height="24"  RenderTransformOrigin="0.579,0.294" Click="MinWindowBut_Click" Panel.ZIndex="1" Grid.Column="1" >
+            <Image Source="images\collapse.png" Height="23" Width="26" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.185"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Button>
+
+
+        <Menu Height="25" Margin="0,0,-0.2,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Label x:Name="reg" Content="Registration" Grid.Column="1" Margin="30.8,35,108.8,0" VerticalAlignment="Top" Height="50" FontSize="30" Foreground="White" FontWeight="Bold"/>
+        <Grid x:Name="logGrid" HorizontalAlignment="Left" Margin="42,97,0,26.8" Width="344" Grid.ColumnSpan="2">
+            <Grid.Background>
+                <ImageBrush ImageSource="images\fonReady.jpg"/>
+            </Grid.Background>
+            <Border BorderBrush="Black" BorderThickness="2" HorizontalAlignment="Left" Height="783" VerticalAlignment="Top" Width="344" Margin="0,0,0,-0.4"/>
+            <TextBox x:Name="NameTB" Height="30" Margin="10,37,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14" FontFamily="Arial" PreviewKeyDown="NameTB_PreviewKeyDown" PreviewTextInput="NameTB_PreviewTextInput" LostFocus="NameTB_LostFocus"   />
+            <TextBox x:Name="SurnameTB" Height="30" Margin="10,102,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14" FontFamily="Arial"  PreviewKeyDown="NameTB_PreviewKeyDown" PreviewTextInput="NameTB_PreviewTextInput" LostFocus="NameTB_LostFocus"/>
+            <TextBox x:Name="loginTB" Height="30" Margin="10,377,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14" FontFamily="Arial" PreviewKeyDown="NameTB_PreviewKeyDown" LostFocus="loginTB_LostFocus" PreviewTextInput="loginTB_PreviewTextInput"/>
+            <Button x:Name="RegButton" Content="Register" Margin="99,575,114,0" VerticalAlignment="Top" Height="45" Foreground="White" Click="RegButton_Click"/>
+            <PasswordBox x:Name="passTB" Margin="10,445,10,0" VerticalAlignment="Top" Height="30" Foreground="White" PreviewKeyDown="NameTB_PreviewKeyDown" PreviewTextInput="passTB_PreviewTextInput" LostFocus="passTB_LostFocus" />
+            <TextBox x:Name="patronymicTB" Height="30" Margin="10,168,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14" FontFamily="Arial"  PreviewKeyDown="NameTB_PreviewKeyDown" PreviewTextInput="NameTB_PreviewTextInput" LostFocus="loginTB_LostFocus"/>
+            <TextBox x:Name="adressTB" Height="30" Margin="10,232,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14" FontFamily="Arial" PreviewTextInput="adressTB_PreviewTextInput" LostFocus="adressTB_LostFocus"  />
+            <TextBox x:Name="phoneTB" Height="30" Margin="10,303,10,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14" FontFamily="Arial" LostFocus="phoneTB_LostFocus"  />
+            <TextBox x:Name="ageTB" Height="30" Margin="143,518,151,0" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="14" FontFamily="Arial" PreviewTextInput="ageTB_PreviewTextInput" />
+
+
+        </Grid>
+        <Label Content="Name" Grid.Column="1" HorizontalAlignment="Left" Margin="99.8,103,0,0" VerticalAlignment="Top" Width="100" AutomationProperties.Name="grgs" FontSize="15" Foreground="White"  />
+        <Label Content="Surname" Grid.Column="1" HorizontalAlignment="Left" Margin="92.8,166,0,0" VerticalAlignment="Top" Width="100" AutomationProperties.Name="grgs" FontSize="15" Foreground="White"  />
+        <Label Content="Patronymic" Grid.Column="1" HorizontalAlignment="Left" Margin="84.8,234,0,0" VerticalAlignment="Top" Width="100" AutomationProperties.Name="grgs" FontSize="15" Foreground="White"  />
+        <Label Content="Adress" Grid.Column="1" HorizontalAlignment="Left" Margin="95.8,297,0,0" VerticalAlignment="Top" Width="100" AutomationProperties.Name="grgs" FontSize="15" Foreground="White"  />
+        <Label Content="Phone number" Grid.Column="1" HorizontalAlignment="Left" Margin="72.8,365,0,0" VerticalAlignment="Top" Width="129" AutomationProperties.Name="grgs" FontSize="15" Foreground="White"  />
+        <Label Content="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="96.8,443,0,0" VerticalAlignment="Top" Width="100" AutomationProperties.Name="grgs" FontSize="15" Foreground="White"  />
+        <Label Content="Password" Grid.Column="1" HorizontalAlignment="Left" Margin="87.8,514,0,0" VerticalAlignment="Top" Width="100" AutomationProperties.Name="grgs" FontSize="15" Foreground="White"  />
+        <Label Content="Age" Grid.Column="1" HorizontalAlignment="Left" Margin="102.8,587,0,0" VerticalAlignment="Top" Width="100" AutomationProperties.Name="grgs" FontSize="15" Foreground="White"  />
+
+
+    </Grid>
+</Window>

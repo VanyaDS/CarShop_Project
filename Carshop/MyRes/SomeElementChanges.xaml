@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                
+                    xmlns:local="clr-namespace:TaskManager.MyRes">
+
+
+    
+        <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
+            <Border  CornerRadius="3"
+                    TextBlock.Foreground="White">
+                <ContentPresenter RecognizesAccessKey="True"></ContentPresenter>
+            </Border>
+        </ControlTemplate>
+   
+
+    <Image x:Key="findIcon" Source="task.png"/>
+    <Image x:Key="backIcon" Source="back.png"/>
+    <Image x:Key="backIcon2" Source="back.png"/>
+    <Image x:Key="closeIcon" Source="close8.png"/>
+    <Image x:Key="collapseIcon" Source="collapseChange.png"/>
+</ResourceDictionary>
